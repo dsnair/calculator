@@ -1,15 +1,27 @@
-.App {
+body {
   background-color: #282c34;
-  min-height: 100vh;
+}
+.App {
+  width: 400px;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.number {
+  width: 100px;
+  height: 100px;
+  background-color: ghostwhite;
+  outline: none;
+  border: 1px solid lightgrey;
+}
+
+.symbol {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+  color: white;
+  outline: none;
+  border: 1px solid lightgrey;
 }
