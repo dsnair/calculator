@@ -26,6 +26,7 @@ export default function App() {
       {numSymBtn.map(btn => (
         <button className={btn[1]}>{btn[0]}</button>
       ))}
+      <button className="clear">clear</button>
     </div>
   )
 }

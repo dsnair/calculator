@@ -25,3 +25,11 @@ body {
   outline: none;
   border: 1px solid lightgrey;
 }
+
+.clear {
+  height: 100px;
+  flex-grow: 1;
+  background-color: lightsteelblue;
+  outline: none;
+  border: 1px solid lightgrey;
+}
