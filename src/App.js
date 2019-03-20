@@ -43,7 +43,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <input readOnly value={expr} className="answer" />
+      {expr ? (
+        <input readOnly value={expr} className="answer" />
+      ) : (
+        <input readOnly value={0} className="answer" />
+      )}
 
       {exprBtn.map((btn, index) => (
         <button
