@@ -27,23 +27,23 @@ export default function App() {
     [7, 'number', '7'],
     [8, 'number', '8'],
     [9, 'number', '9'],
-    [<i className="fas fa-divide" />, 'symbol', '/'],
+    [<i className="fas fa-divide" />, 'operator', '/'],
     [4, 'number', '4'],
     [5, 'number', '5'],
     [6, 'number', '6'],
-    [<i className="fas fa-times" />, 'symbol', '*'],
+    [<i className="fas fa-times" />, 'operator', '*'],
     [1, 'number', '1'],
     [2, 'number', '2'],
     [3, 'number', '3'],
-    [<i className="fas fa-minus" />, 'symbol', '-'],
+    [<i className="fas fa-minus" />, 'operator', '-'],
     [0, 'number', '0'],
-    ['.', 'symbol', '.'],
-    [<i className="fas fa-plus" />, 'symbol', '+']
+    ['.', 'number', '.'],
+    [<i className="fas fa-plus" />, 'operator', '+']
   ]
 
   return (
     <div className="App">
-      <input readOnly value={expr} className="answer"/>
+      <input readOnly value={expr} className="answer" />
 
       {exprBtn.map((btn, index) => (
         <button
@@ -55,7 +55,7 @@ export default function App() {
         </button>
       ))}
 
-      <button onClick={() => handleEqual()} className="symbol">
+      <button onClick={() => handleEqual()} className="equal">
         {<i className="fas fa-equals" />}
       </button>
 

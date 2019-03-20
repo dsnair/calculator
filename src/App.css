@@ -1,6 +1,7 @@
 body {
   background-color: #282c34;
 }
+
 .App {
   width: 400px;
   margin: auto;
@@ -12,30 +13,47 @@ body {
 .number {
   width: 100px;
   height: 100px;
-  background-color: ghostwhite;
   outline: none;
+  background-color: ghostwhite;
   border: 1px solid lightgrey;
+  font-size: 30px;
 }
 
-.symbol {
+.operator {
   width: 100px;
   height: 100px;
+  outline: none;
   background-color: cornflowerblue;
   color: white;
-  outline: none;
   border: 1px solid lightgrey;
+  font-size: 30px;
+}
+
+.equal {
+  width: 100px;
+  height: 100px;
+  outline: none;
+  background-color: goldenrod;
+  color: white;
+  font-size: 30px;
 }
 
 .clear {
   height: 100px;
   flex-grow: 1;
-  background-color: lightsteelblue;
   outline: none;
+  background-color: firebrick;
+  color: white;
   border: 1px solid lightgrey;
+  font-size: 30px;
 }
 
 .answer {
   height: 100px;
   width: 400px;
   outline: none;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  font-size: 70px;
 }
