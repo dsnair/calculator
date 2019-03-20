@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import math from 'mathjs'
 import './App.css'
 
 export default function App() {
-  const [exp, setExp] = useState('0')
+  const [exp, setExp] = useState('')
   const handleExp = str => setExp(exp.concat(str))
-  const handleClear = () => setExp('0')
+  const handleClear = () => setExp('')
+  const handleEqual = () => setExp(math.eval(exp))
 
   const expBtn = [
     [7, 'number', '7'],
@@ -21,7 +23,6 @@ export default function App() {
     [<i className="fas fa-minus" />, 'symbol', '-'],
     [0, 'number', '0'],
     ['.', 'symbol', '.'],
-    [<i className="fas fa-equals" />, 'symbol', '='],
     [<i className="fas fa-plus" />, 'symbol', '+']
   ]
 
@@ -36,7 +37,12 @@ export default function App() {
           {btn[0]}
         </button>
       ))}
-      <button onClick={() => handleClear()} className="clear">clear</button>
+      <button onClick={() => handleEqual()} className="symbol">
+        {<i className="fas fa-equals" />}
+      </button>
+      <button onClick={() => handleClear()} className="clear">
+        clear
+      </button>
     </div>
   )
 }
