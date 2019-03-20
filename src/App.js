@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import './App.css'
 
 export default function App() {
-  const [numSym, setNumSym] = useState('')
-  const handleNumSymClick = exp => setNumSym(numSym.concat(exp))
+  const [exp, setExp] = useState('0')
+  const handleExp = str => setExp(exp.concat(str))
+  const handleClear = () => setExp('0')
 
-  const numSymBtn = [
+  const expBtn = [
     [7, 'number', '7'],
     [8, 'number', '8'],
     [9, 'number', '9'],
@@ -26,16 +27,16 @@ export default function App() {
 
   return (
     <div className="App">
-      {numSymBtn.map((btn, index) => (
+      {expBtn.map((btn, index) => (
         <button
-          onClick={() => handleNumSymClick(btn[2])}
+          onClick={() => handleExp(btn[2])}
           className={btn[1]}
           key={index}
         >
           {btn[0]}
         </button>
       ))}
-      <button className="clear">clear</button>
+      <button onClick={() => handleClear()} className="clear">clear</button>
     </div>
   )
 }
