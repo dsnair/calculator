@@ -15,7 +15,7 @@ export default function App() {
 
   const handleEqual = () => {
     try {
-      setExpr(math.eval(expr).toString())
+      setExpr(math.round(math.eval(expr), 8).toString())
     } catch (err) {
       if (err instanceof SyntaxError) {
         setExpr('Err')

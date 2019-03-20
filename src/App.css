@@ -50,7 +50,7 @@ body {
 
 .answer {
   height: 100px;
-  width: 400px;
+  width: 100%;
   outline: none;
   background-color: black;
   color: white;
