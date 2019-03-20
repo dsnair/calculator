@@ -42,7 +42,7 @@ export default function App() {
   ]
 
   return (
-    <div className="App">
+    <div className="app">
       {expr ? (
         <input readOnly value={expr} className="answer" />
       ) : (
