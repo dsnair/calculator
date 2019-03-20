@@ -6,7 +6,7 @@ export default function App() {
   const [expr, setExpr] = useState('')
 
   const handleExpr = str => {
-    expr === 'Infinity' || expr === 'Err'
+    expr === 'Infinity' || expr === 'Err' || expr === 'NaN'
       ? setExpr(str)
       : setExpr(expr.concat(str))
   }
@@ -37,7 +37,7 @@ export default function App() {
     [3, 'number', '3'],
     [<i className="fas fa-minus" />, 'operator', '-'],
     [0, 'number', '0'],
-    ['.', 'number', '.'],
+    ['·', 'number', '.'],
     [<i className="fas fa-plus" />, 'operator', '+']
   ]
 
