@@ -2,8 +2,10 @@
   "name": "calculator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dsnair.github.io/calculator",
   "dependencies": {
     "babel-loader": "^8.0.5",
+    "gh-pages": "^2.0.1",
     "mathjs": "^5.7.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -13,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
