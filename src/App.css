@@ -33,3 +33,9 @@ body {
   outline: none;
   border: 1px solid lightgrey;
 }
+
+.answer {
+  height: 100px;
+  width: 400px;
+  outline: none;
+}

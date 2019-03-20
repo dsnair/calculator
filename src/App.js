@@ -3,12 +3,27 @@ import math from 'mathjs'
 import './App.css'
 
 export default function App() {
-  const [exp, setExp] = useState('')
-  const handleExp = str => setExp(exp.concat(str))
-  const handleClear = () => setExp('')
-  const handleEqual = () => setExp(math.eval(exp))
+  const [expr, setExpr] = useState('')
 
-  const expBtn = [
+  const handleExpr = str => {
+    expr === 'Infinity' || expr === 'Err'
+      ? setExpr(str)
+      : setExpr(expr.concat(str))
+  }
+
+  const handleClear = () => setExpr('')
+
+  const handleEqual = () => {
+    try {
+      setExpr(math.eval(expr).toString())
+    } catch (err) {
+      if (err instanceof SyntaxError) {
+        setExpr('Err')
+      }
+    }
+  }
+
+  const exprBtn = [
     [7, 'number', '7'],
     [8, 'number', '8'],
     [9, 'number', '9'],
@@ -28,18 +43,22 @@ export default function App() {
 
   return (
     <div className="App">
-      {expBtn.map((btn, index) => (
+      <input readOnly value={expr} className="answer"/>
+
+      {exprBtn.map((btn, index) => (
         <button
-          onClick={() => handleExp(btn[2])}
+          onClick={() => handleExpr(btn[2])}
           className={btn[1]}
           key={index}
         >
           {btn[0]}
         </button>
       ))}
+
       <button onClick={() => handleEqual()} className="symbol">
         {<i className="fas fa-equals" />}
       </button>
+
       <button onClick={() => handleClear()} className="clear">
         clear
       </button>
